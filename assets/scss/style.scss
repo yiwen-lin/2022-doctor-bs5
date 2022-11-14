@@ -1,0 +1,122 @@
+//白寫的tab
+.clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.anchorList {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        & > a {
+            display: block;
+            padding: 8px 12px;
+            background-color: #eee;
+            color: #999;
+            text-decoration: none;
+        }
+    }
+}
+
+.tab {
+
+    &__switch {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & > li {
+            float: left;
+            background-color: #eee;
+            color: #999;
+            padding: 12px 20px;
+            cursor: pointer;
+
+            &.active {
+                background-color: #a7328f;
+                color: #fff;
+            }
+        }
+    }
+
+    &__panel {
+        display: none;
+    }
+}
+
+.anchorGroup {
+    padding: 30px 20px;
+}
+
+#tab1_section1 {
+    background-color: #b0c9e6;
+}
+
+#tab1_section2 {
+    background-color: #75a187;
+}
+
+#tab1_section3 {
+    background-color: #f2cb9b;
+}
+
+#tab2_section1 {
+    background-color: #e6b0b0;
+}
+
+#tab2_section2 {
+    background-color: #c8b0e6;
+}
+//白寫的tab end
+
+
+// mixin
+@mixin mobile {
+	@media(max-width:767px){
+		@content;
+	}
+}
+@mixin ipad {
+	@media(max-width:992px){
+		@content;
+	}
+}
+
+//全站字體
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@400;500&display=swap');
+
+$main-color:#2DA6E0; 
+$main-color-dark:#1A80C2 !default;
+
+body {
+    background-color: FBFBFB;
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    color: $main-color;
+}
+h1 {
+    
+}

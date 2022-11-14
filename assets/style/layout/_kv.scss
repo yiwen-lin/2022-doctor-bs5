@@ -1,0 +1,81 @@
+.op-block {
+  margin-top: 8rem;
+}
+
+#map_icon {
+  svg {
+    transform-origin: center bottom;
+    transition: transform 0.3s;
+    cursor: pointer;
+    .pin-cls-1 {
+      fill: #689d47;
+    }
+    .pin-cls-3 {
+      fill: #fff;
+      // stroke: #727171;
+      stroke: rgba(113, 113, 113, .25);
+      stroke-miterlimit: 10;
+    }
+    .pin-cls-4 {
+      fill: #fff;
+      stroke: #fff;
+      transform-origin: center;
+      animation: scale 2s infinite;
+    }
+    &:hover {
+      transform: scale(1.4387596391);
+      .pin-cls-1 {
+        fill: #fff;
+      }
+      .pin-cls-3 {
+        fill: #689d47;
+        stroke: #689d47;
+      }
+      .pin-cls-4 {
+        fill: transparent;
+        stroke: transparent;
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  50% {
+    opacity: .5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+}
+
+.pin {
+  position: absolute;
+  width: 4.25%;
+  &.pin-1 {
+    top: 33.5%;
+    left: 72%;
+  }
+  &.pin-2 {
+    top: 37.5%;
+    left: 49.25%;
+  }
+  &.pin-3 {
+    top: 33.25%;
+    left: 30%;
+  }
+  &.pin-4 {
+    top: 7.75%;
+    left: 14%;
+  }
+  &.pin-5 {
+    top: 10.25%;
+    left: 90.95%;
+  }
+}

@@ -1,0 +1,455 @@
+//全站字體
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    background-color: FBFBFB;
+    color: #222;
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    &.opened {
+      overflow: hidden;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    // color: #fff;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    line-height: $line-height-base;
+}
+h1 {
+    font-weight: 700;
+}
+h3 {
+    margin-bottom: 48px;
+    .h3-line {
+        width: 50px;
+        height: 3px;
+        background-color: $primary;
+        margin: 16px auto 0;
+    }
+}
+h4 {
+    font-weight: 700;
+    .h4-line {
+        width: 50px;
+        height: 3px;
+        background-color: $white;
+        margin: 16px 0 32px;
+
+        @include mobile {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $primary;
+        }
+    }
+}
+p {
+    line-height: 1.75;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.s-title {
+    font-weight: 500;
+    color: $primary;
+    font-size: 40px;
+
+    @include mobile {
+        font-size: 28px;
+    }
+}
+
+.number-title {
+    font-size: 50px;
+    line-height: 1.3;
+    font-weight: 500;
+    -webkit-text-stroke: 1px $primary;
+    color: #fff;
+
+    @include mobile {
+        font-size: 38px;
+    }
+}
+
+.fs-6 {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 100px 0;
+
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+
+.download-btn {
+    a {
+        text-align: center;
+        display: inline-block;
+        border-radius: 50px;
+        padding: 12px 42px;
+        text-decoration: none;
+        font-size: 18px;
+        transition: .3s;
+        color: #fff;
+        background-color: #333;
+        letter-spacing: 2px;
+
+        &:hover {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}
+
+//header
+.navbar {
+    padding: 20px 0;
+    background-color: transparent;
+    position: fixed!important;
+    width: 100vw;
+    z-index: 10;
+
+    .navbar-brand {
+        height: 42px;
+        width: 159px;
+        background: url('../images/logo-yfy.svg') center center no-repeat;
+
+        @include mobile {
+            // height: 24px;
+            // width: 24px;
+        }
+    }
+    @include mobile {
+        background-color: $secondary;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+//footer
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e7e7e7;
+    color: #737373;
+    position: relative;
+
+    p {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: "Noto Sans TC", sans-serif;
+    }
+
+    a {
+        border-bottom: 1px solid #737373;
+        font-size: 14px;
+        line-height: 24px;
+        color: #737373;
+        font-family: "Noto Sans TC", sans-serif;
+        transition: .3s;
+
+        &:hover {
+            color: #737373;
+            opacity: .8;
+        }
+    }
+}
+
+.pc-display {
+    padding: 0;
+    display: block;
+    @include mobile {
+        display: none;
+    }
+}
+.mb-display {
+    display: none;
+    @include mobile {
+        display: block;
+        padding: 0;
+    }
+}
+
+//op-pc
+.op {
+    min-height: 100vh;
+    // background-color: $secondary;
+    background: url(../images/kv.jpg) center bottom no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    .title-block {
+        position: relative;
+        color: #fff;
+        text-shadow: 0em 0.15em 0.3em #999;
+        h1.op-title {
+            font-size: 58px;
+            span {
+                font-size: 70px;
+                font-weight: 500;
+            }
+        }
+        .s-tittle {
+            font-size: 30px;
+            letter-spacing:4px;
+        }
+    }
+    .op-img-svg {
+        margin-top:50px;
+        @include ipad {
+            margin-top:200px;
+        }
+    }
+    @include ipad {
+        min-height:auto;
+        height: auto;
+    }
+}
+//op-pc lightbox
+.lightbox-block {
+    display: none;
+    // border: 1px solid #000;
+    background-color: $secondary;
+    position: relative;
+    width: 80%;
+    height: 75%;
+    overflow: scroll;
+    z-index: 10;
+    left: 10%;
+    top: 10%;
+    svg{
+        padding-left: 30px;
+    }
+    .lightbox-container {
+        padding: 60px 0px;
+        min-height: 100%;
+    }
+    .lightbox-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+        img {
+            width:34px;
+            height: 34px;
+        }
+    }
+    .step-block {
+        padding: 0 60px;
+    }
+    @include mobile {
+        .lightbox-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            img {
+                width:30px;
+                height: 30px;
+            }
+        }
+    }
+}
+.lightbox-black {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: .7;
+  cursor: pointer;
+  z-index: 10;
+}
+
+//op-mb
+.bg-color {
+    background-color: $secondary;
+    padding: 0 0 20px;
+}
+.op-mb {
+    padding-top:100px;
+    padding-bottom: 60px;
+    .title-block {
+        position: relative;
+        color: #fff;
+        // text-shadow: 0em 0.15em 0.3em #999;
+        margin-bottom: 50px;
+        h1.op-title {
+            font-size: 50px;
+            span {
+                font-size: 60px;
+                font-weight: 500;
+            }
+        }
+        .s-tittle {
+            font-size: 22px;
+            letter-spacing:2px;
+        }
+    }
+}
+.l-ling {
+    width: 1px;
+    height: 30px;
+    background-color:#fff;
+    margin-bottom: 30px;
+}
+.step-block {
+    .step-title {
+        border: 1px solid #fff;
+        border-radius:50px;
+        padding: 8px 28px;
+        color: $primary;
+        font-size: 20px;
+        font-weight: 400;
+        display:inline-block;
+    }
+    .step-title-last {
+        border: 1px solid $primary;
+        margin-top: 30px;
+    }
+    h3 {
+        color:$primary;
+        font-size: 20px;
+    }
+    p {
+        span {
+            color:$primary;
+            font-weight: 400;
+        }
+        a {
+            color:$primary;
+            font-weight: 400;
+        }
+    }
+}
+.mb-bottom {
+    background: url(../images/mb-bottom.svg) top center no-repeat;
+    background-size: cover;
+    height: 100px;
+}
+
+//s1
+.index-s1 {
+    background: url(../images/s1-bg.svg) top center no-repeat;
+    background-size: cover;
+    // padding-top: 150px;
+    @media (max-width: 1280px) {
+        // padding-top:230px ;
+    }
+    @include ipad {
+        padding-top: 0px;
+    }
+    @include mobile {
+        background-image: none;
+        padding-top: 40px;
+    }
+
+    .s1-card {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 30px;
+        background: #97B59E;
+        color: #fff;
+        border-radius: 20px;
+        text-align: center;
+
+        span {
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        &.card-color-2 {
+            background: #9CBD77;
+        }
+
+        &.card-color-3 {
+            background: #689D47;
+        }
+
+        &.card-color-4 {
+            background: #75ADAF;
+        }
+
+        &.card-color-5 {
+            background: #32584C;
+        }
+
+        @include mobile {
+            font-size: 18px;
+
+            span {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+//s3 
+.index-s3 {
+    background-image: linear-gradient(180deg, #F3FFFE 0%, #C9E9E7 100%);
+    .card-a {
+        color:#333;
+        text-decoration: none;
+        transition: .3s;
+        &:hover {
+            .card-text-link {
+                color:$primary;
+                border-color: $primary;
+                transition: .3s;
+            }
+        }
+    }
+    .card-text-link {
+        border-bottom: 1px solid #000;
+        padding-bottom: 2px;
+    }
+    .card-text,
+    .card-img {
+        width: 50%;
+    }
+
+    .card-text {
+        padding: 30px 50px;
+
+        h3 {
+            color: $primary;
+        }
+        @include ipad {
+            padding: 0px 0px 0px 30px;
+        }
+        @include mobile {
+            padding: 20px 10px;
+        }
+    }
+
+    @include mobile {
+
+        .card-text,
+        .card-img {
+            width: 100%;
+        }
+    }
+}
