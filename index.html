@@ -35,57 +35,90 @@
 
 <body>
 
-      <section class="container">
-        <nav class="navbar navbar-light navbar-static bg-faded" role="navigation">
-          <a class="navbar-brand" href="#">
-            <img src="assets/images/img_logo.svg" alt="" width="90">
-          </a>
-      
-          <ul class="nav navbar-nav">
-           <div class="navbar-toggler pull-xs-right" id="navbarSideButton">
-            <a class="d-flex">
-              看完整名單<i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-           </div>
-          </ul>
-      
-         <ul class="navbar-side" id="navbarSide">
-          <li class="navbar-side-item">
-            <a href="#" class="side-link">ABC-0</a>
-          </li>
-          <li class="navbar-side-item">
-            <a href="#" class="side-link">ABC-1</a>
-          </li>
-          <li class="navbar-side-item">
-            <a href="#" class="side-link">ABC-2</a>
-          </li>
-          <li class="navbar-side-item">
-            <a href="#" class="side-link">ABC-3</a>
-          </li>
-          <li class="navbar-side-item">
-            <a href="#" class="side-link">ABC-4</a>
-          </li>
-         </ul>
-      
-          <div class="overlay"></div>
-        </nav>
-      </section>
-
-      <!-- <nav class="navbar navbar-light bg-light">
-        <div class="container">
+        <nav class="navbar navbar-static sticky-top" role="navigation">
+          <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/images/img_logo.svg" alt="" width="90">
-              </a>
-          <a class="d-flex">
-            看完整名單<i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-        </div>
-      </nav> -->
+              <img src="assets/images/img_logo.svg" alt="" width="90">
+            </a>
+            <ul class="nav navbar-nav">
+              <div class="navbar-toggler pull-xs-right" id="navbarSideButton">
+                <a class="d-flex">
+                  看完整名單<i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </div>
+            </ul>
 
-      <h1>test</h1>
+            <div class="navbar-side" id="navbarSide">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      內科
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          <a href="#tab1_section1" data-js-anchor="true" data-tab-target="tab1">一般外科</a>
+                        </li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="overlay"></div>
+          </div>
+        </nav>
+
+
+      <!-- Video -->
+      <div class="op-overlay">
+        <video class="op-video" poster="" playsinline autoplay muted loop>
+          <!-- <source src="http://thenewcode.com/assets/videos/fashion.mp4" type="video/mp4"> -->
+          <!-- <source src="./assets/images/video/op-pc.mp4" type="video/mp4"> -->
+          </video>
+      </div>
+      
+      <header>
+        <div class="">
+          <div class="title">
+            <span class="">2022</span>
+            <span class="">GOOD</span>
+            <span class="">DOCTOR</span>
+          </div>
+        </div>
+
+      </header>
+        
 
     <main class="main">
-        <ul class="anchorList clearfix">
+
+        <!-- 放在nav裡 -->
+        <!-- <ul class="anchorList clearfix">
             <li>
                 <a href="#tab1_section1" data-js-anchor="true" data-tab-target="tab1">tab1_section1</a>
             </li>
@@ -101,7 +134,7 @@
             <li>
                 <a href="#tab2_section2" data-js-anchor="true" data-tab-target="tab2">tab2_section2</a>
             </li>
-        </ul>
+        </ul> -->
         <section class="content">
             <div class="tab">
                 <ul class="tab__switch clearfix" data-js-tabs="true">
