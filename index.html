@@ -2,123 +2,267 @@
 <html lang="zh-TW">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>年度醫生</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="年度醫生">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <link rel="icon" href="https://www.commonhealth.com.tw/assets/images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>年度醫生</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="年度醫生">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <link rel="icon" href="https://www.commonhealth.com.tw/assets/images/favicon.ico">
 
-    <link rel="stylesheet" href="./assets/plugins/bootstrap.css"> <!--宣告 bs5 CSS-->
-    <script src="./assets/plugins/bootstrap.bundle.min.js"></script> <!--宣告 bs5 JS-->
+  <link rel="stylesheet" href="./assets/plugins/bootstrap.css">
+  <!--宣告 bs5 CSS-->
+  <script src="./assets/plugins/bootstrap.bundle.min.js"></script>
+  <!--宣告 bs5 JS-->
 
-    <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
-    <!-- <link rel="stylesheet" href="./assets/css/all.min.css"> -->
-    <link rel="stylesheet" href="./assets/css/style.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
+  <!-- <link rel="stylesheet" href="./assets/css/all.min.css"> -->
+  <link rel="stylesheet" href="./assets/css/style.min.css">
 
-    <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
-    
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/8b02080f44.js" crossorigin="anonymous"></script>
-    
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/8b02080f44.js" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
 
-        <nav class="navbar navbar-static sticky-top" role="navigation">
-          <div class="container">
-            <a class="navbar-brand" href="#">
-              <img src="assets/images/img_logo.svg" alt="" width="90">
-            </a>
-            <ul class="nav navbar-nav">
-              <div class="navbar-toggler pull-xs-right" id="navbarSideButton">
-                <a class="d-flex">
-                  看完整名單<i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-              </div>
-            </ul>
+  <nav class="navbar navbar-static sticky-top" role="navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/img_logo.svg" alt="" width="90">
+      </a>
+      <ul class="nav navbar-nav">
+        <div class="navbar-toggler pull-xs-right" id="navbarSideButton">
+          <a class="d-flex">
+            看完整名單<i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </div>
+      </ul>
 
-            <div class="navbar-side" id="navbarSide">
-              <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      內科
-                    </button>
-                  </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                      <ul>
-                        <li>
-                          <a href="#tab1_section1" data-js-anchor="true" data-tab-target="tab1">一般外科</a>
-                        </li>
-                      </ul>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                  </div>
+      <div class="navbar-side" id="navbarSide">
+        <div>
+          <div class="close-navbar">
+            <a href=""><i class="fa-solid fa-xmark"></i></a>
+          </div>
+          <!-- 手風琴 -->
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  內科
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#tab1_section1" data-js-anchor="true" data-tab-target="tab1">一般內科感染科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section2" data-js-anchor="true" data-tab-target="tab1">腎臟科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section3" data-js-anchor="true" data-tab-target="tab1">免疫風濕過敏科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section4" data-js-anchor="true" data-tab-target="tab1">消化科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section5" data-js-anchor="true" data-tab-target="tab1">神經內科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section6" data-js-anchor="true" data-tab-target="tab1">心臟內科</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-      
-            <div class="overlay"></div>
-          </div>
-        </nav>
-
-
-      <!-- Video -->
-      <div class="op-overlay">
-        <video class="op-video" poster="" playsinline autoplay muted loop>
-          <!-- <source src="http://thenewcode.com/assets/videos/fashion.mp4" type="video/mp4"> -->
-          <!-- <source src="./assets/images/video/op-pc.mp4" type="video/mp4"> -->
-          </video>
-      </div>
-      
-      <header>
-        <div class="">
-          <div class="title">
-            <span class="">2022</span>
-            <span class="">GOOD</span>
-            <span class="">DOCTOR</span>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  外科
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#tab1_section1" data-js-anchor="true" data-tab-target="tab1">心臟外科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section2" data-js-anchor="true" data-tab-target="tab1">一般外科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section3" data-js-anchor="true" data-tab-target="tab1">免疫風濕過敏科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section4" data-js-anchor="true" data-tab-target="tab1">泌尿科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section5" data-js-anchor="true" data-tab-target="tab1">耳鼻喉科</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section6" data-js-anchor="true" data-tab-target="tab1">神外</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section6" data-js-anchor="true" data-tab-target="tab1">胸外</a>
+                    </li>
+                    <li>
+                      <a href="#tab1_section6" data-js-anchor="true" data-tab-target="tab1">骨科</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  婦兒科
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#tab3_section1" data-js-anchor="true" data-tab-target="tab3">兒科</a>
+                    </li>
+                    <li>
+                      <a href="#tab3_section2" data-js-anchor="true" data-tab-target="tab3">婦科</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  家醫科
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#tab4_section1" data-js-anchor="true" data-tab-target="tab4">家醫科</a>
+                    </li>
+                    <li>
+                      <a href="#tab4_section2" data-js-anchor="true" data-tab-target="tab4">眼科</a>
+                    </li>
+                    <li>
+                      <a href="#tab4_section3" data-js-anchor="true" data-tab-target="tab4">皮膚科</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  特殊科別
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#tab5_section1" data-js-anchor="true" data-tab-target="tab5">麻醉科</a>
+                    </li>
+                    <li>
+                      <a href="#tab5_section2" data-js-anchor="true" data-tab-target="tab5">精神科</a>
+                    </li>
+                    <li>
+                      <a href="#tab5_section3" data-js-anchor="true" data-tab-target="tab5">腫瘤科</a>
+                    </li>
+                    <li>
+                      <a href="#tab5_section4" data-js-anchor="true" data-tab-target="tab5">復健科</a>
+                    </li>
+                    <li>
+                      <a href="#tab5_section5" data-js-anchor="true" data-tab-target="tab5">中醫</a>
+                    </li>
+                    <li>
+                      <a href="#tab5_section6" data-js-anchor="true" data-tab-target="tab5">牙科</a>
+                    </li>
+                    <li>
+                      <a href="#tab5_section7" data-js-anchor="true" data-tab-target="tab5">急診醫學</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-      </header>
-        
+        <!-- social block -->
+        <div class="social-block">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-line"></i></a>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
 
-    <main class="main">
+      <div class="overlay"></div>
+    </div>
+  </nav>
 
-        <!-- 放在nav裡 -->
-        <!-- <ul class="anchorList clearfix">
+
+  <!-- Video -->
+  <div class="op-overlay">
+    <video class="op-video" poster="" playsinline autoplay muted loop>
+      <!-- <source src="http://thenewcode.com/assets/videos/fashion.mp4" type="video/mp4"> -->
+      <!-- <source src="./assets/images/video/op-pc.mp4" type="video/mp4"> -->
+    </video>
+  </div>
+
+  <header>
+    <div class="">
+      <div class="title">
+        <span class="">2022</span>
+        <span class="">GOOD</span>
+        <span class="">DOCTOR</span>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+    <section class="section1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <p>年度好醫生前言年度好醫生，前言年度好醫生前言年度好醫生前言年度好醫生前言年度好醫生前言年度好醫生前言年度，好醫生前言年度好醫生前言年度好醫生前言年度好醫生前言，年度好醫生前言年度好醫生前言年度好醫生前言年度好醫生前言年度好醫生前言年度好醫生前言年度好醫生。</p>
+            <p>年度好醫生前言年度好醫生前言年度好醫生前言，年度好醫生前言年度好醫生前言年度好醫，生前言年度好醫生前言年度好醫生前言年度好醫生。</p>
+            <div class="col-md-6 offset-md-3 my-5">
+              <img src="./assets/images/logo-gooddoctor.png" alt="" class="gd-logo" data-aos="fade-down">
+            </div>
+            <p>評選介紹評選介紹評選介紹評選介紹，評選介紹評選介紹評選介紹，評選介紹評選介紹評選介紹，評選介紹評選介紹評選介紹評選介紹，評選介紹評選介紹評選介紹評選介紹，評選介紹評選介紹評選介紹評選介紹評選介紹評選介紹，評選介紹評選介紹評選介紹評選介紹。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 放在nav裡 -->
+    <!-- <ul class="anchorList clearfix">
             <li>
                 <a href="#tab1_section1" data-js-anchor="true" data-tab-target="tab1">tab1_section1</a>
             </li>
@@ -135,214 +279,206 @@
                 <a href="#tab2_section2" data-js-anchor="true" data-tab-target="tab2">tab2_section2</a>
             </li>
         </ul> -->
-        <section class="content">
-            <div class="tab">
-                <ul class="tab__switch clearfix" data-js-tabs="true">
-                    <li data-id="js-tab" data-tab-target-id="tab1">tab1</li>
-                    <li data-id="js-tab" data-tab-target-id="tab2">tab2</li>
-                </ul>
-                <div class="tab__content">
-                    <div class="tab__panel" data-tab-id="tab1">
-                        <div id="tab1_section1" class="anchorGroup">
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1<br>
-                            tab1_section1
-                        </div>
-                        <div id="tab1_section2" class="anchorGroup">
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2<br>
-                            tab1_section2
-                        </div>
-                        <div id="tab1_section3" class="anchorGroup">
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3<br>
-                            tab1_section3
-                        </div>
+    <section>
+      <div class="container">
+        <div class="row">
+
+          <div class="tab col-12">
+            <ul class="tab__switch clearfix" data-js-tabs="true">
+              <li data-id="js-tab" data-tab-target-id="tab1">內科</li>
+              <li data-id="js-tab" data-tab-target-id="tab2">外科</li>
+              <li data-id="js-tab" data-tab-target-id="tab3">婦兒科</li>
+              <li data-id="js-tab" data-tab-target-id="tab4">家醫科</li>
+              <li data-id="js-tab" data-tab-target-id="tab5">特殊科別</li>
+            </ul>
+
+            <div class="tab__content">
+              
+              <div class="tab__panel" data-tab-id="tab1">
+                <div id="tab1_section1" class="anchorGroup">
+                  <div class="intro">
+                    <div class="col-12">
+                      <img src="assets/images/intro1-pc.jpg" alt="" class="intro-img mb-5">
                     </div>
-                    <div class="tab__panel" data-tab-id="tab2">
-                        <div id="tab2_section1" class="anchorGroup">
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1<br>
-                            tab2_section1
-                        </div>
-                        <div id="tab2_section2" class="anchorGroup">
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2<br>
-                            tab2_section2
-                        </div>
+                    <div class="col-md-8 offset-md-2">
+                      <p>科別前言假字科別前言假字科別前言假字，科別前言假字科別前言假字科別前言假字科別前言假字科別前言假字科別前言假字科別前言假字。</p>
+                      <p>科別前言假字科別前言假字科別前言假字科別前言假字，科別前言假字科別前言假字科別前言假字，科別前言假字科別前言假字科別前言假字科別前言假字科別前言假字科別前言假字科別前言假字。</p>
                     </div>
+                  </div>
                 </div>
+                <div id="tab1_section2" class="anchorGroup">
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2<br>
+                  tab1_section2
+                </div>
+                <div id="tab1_section3" class="anchorGroup">
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3<br>
+                  tab1_section3
+                </div>
+              </div>
+
+              <div class="tab__panel" data-tab-id="tab2">
+                <div id="tab2_section1" class="anchorGroup">
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1<br>
+                  tab2_section1
+                </div>
+                <div id="tab2_section2" class="anchorGroup">
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2<br>
+                  tab2_section2
+                </div>
+              </div>
             </div>
-        </section>
-    </main>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
-    <!-- fontawesome with animate -->
-    <!-- <div class="fa-3x">
+  </main>
+
+
+  <!-- fontawesome with animate -->
+  <!-- <div class="fa-3x">
         <i class="fa-solid fa-sync fa-spin"></i>
         <i class="fa-solid fa-circle-notch fa-spin"></i>
         <i class="fa-solid fa-cog fa-spin"></i>
@@ -351,41 +487,41 @@
         <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
       </div> -->
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 
-    <!-- bootstrap 5 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+  <!-- bootstrap 5 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
 
-    <!-- tab -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="assets/js/tab.js"></script>
-    <script>
-        $(function () {
-            $('[data-js-tabs="true"]').tabs();
+  <!-- tab -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="assets/js/tab.js"></script>
+  <script>
+    $(function () {
+      $('[data-js-tabs="true"]').tabs();
 
-            $('[data-js-anchor="true"]').on('click', function (e) {
-                e.preventDefault();
-                //切換tab
-                var tab_id = $(this).data('tab-target');
-                $('[data-tab-target-id="' + tab_id + '"]').trigger('click');
-                //滾動至anchor目標區塊
-                var obj = $(this).attr("href");
-                $('html,body').animate({
-                    scrollTop: $(obj).offset().top
-                }, 800);
-                return false;
-            });
-        });
-    </script>
+      $('[data-js-anchor="true"]').on('click', function (e) {
+        e.preventDefault();
+        //切換tab
+        var tab_id = $(this).data('tab-target');
+        $('[data-tab-target-id="' + tab_id + '"]').trigger('click');
+        //滾動至anchor目標區塊
+        var obj = $(this).attr("href");
+        $('html,body').animate({
+          scrollTop: $(obj).offset().top
+        }, 800);
+        return false;
+      });
+    });
+  </script>
 
-    <script src="assets/js/all.js"></script>
+  <script src="assets/js/all.js"></script>
 
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

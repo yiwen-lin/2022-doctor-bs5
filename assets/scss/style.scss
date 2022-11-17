@@ -1,126 +1,169 @@
 //白寫的tab
 .clearfix {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
 
-    &:after {
-        clear: both;
-    }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 .main {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .anchorList {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-    & > li {
-        margin-bottom: 10px;
+  &>li {
+    margin-bottom: 10px;
 
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-
-        & > a {
-            display: block;
-            padding: 8px 12px;
-            background-color: #eee;
-            color: #999;
-            text-decoration: none;
-        }
+    &:last-of-type {
+      margin-bottom: 0;
     }
+
+    &>a {
+      display: block;
+      padding: 8px 12px;
+      background-color: #eee;
+      color: #999;
+      text-decoration: none;
+    }
+  }
 }
 
 .tab {
-
-    &__switch {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-
-        & > li {
-            float: left;
-            background-color: #eee;
-            color: #999;
-            padding: 12px 20px;
-            cursor: pointer;
-
-            &.active {
-                background-color: #a7328f;
-                color: #fff;
-            }
-        }
+  &__switch {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &>li {
+      float: left;
+      border-bottom: 4px solid #E6E6E6;
+      color: #999;
+      padding: 20px 20px;
+      cursor: pointer;
+      width: 20%;
+      text-align: center;
+      transition:.3s;
+      font-size: 24px;
+      font-weight: 500;
+      font-family:'Noto Serif TC', serif;
+      &.active {
+        border-bottom: 8px solid #2DA6E0;
+        color: #2DA6E0;
+        padding-bottom: 18px;
+      }
+      &:hover {
+        color: #2DA6E0;
+        transition:.3s;
+      }
     }
+  }
 
-    &__panel {
-        display: none;
+  &__panel {
+    display: none;
+  }
+  .intro {
+    img {
+      width: 100%;
     }
+  }
+  
 }
 
 .anchorGroup {
-    padding: 30px 20px;
+  padding: 40px 0px;
 }
 
 #tab1_section1 {
-    background-color: #b0c9e6;
+  // background-color: #4c5763;
 }
 
 #tab1_section2 {
-    background-color: #75a187;
+  background-color: #75a187;
 }
 
 #tab1_section3 {
-    background-color: #f2cb9b;
+  background-color: #f2cb9b;
 }
 
 #tab2_section1 {
-    background-color: #e6b0b0;
+  background-color: #e6b0b0;
 }
 
 #tab2_section2 {
-    background-color: #c8b0e6;
+  background-color: #c8b0e6;
 }
 //白寫的tab end
 
 
 // mixin
 @mixin mobile {
-	@media(max-width:767px){
-		@content;
-	}
+  @media(max-width:767px) {
+    @content;
+  }
 }
+
 @mixin ipad {
-	@media(max-width:992px){
-		@content;
-	}
+  @media(max-width:992px) {
+    @content;
+  }
 }
 
 //全站字體
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&family=Noto+Serif+TC:wght@200;300;400;500&family=Roboto:wght@100;300;500;900&display=swap');
 
-$main-color:#2DA6E0; 
+$main-color:#2DA6E0;
 $main-color-dark:#1A80C2 !default;
 
 body {
-    position: relative;
-    background-color: FBFBFB;
-    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
-    // font-family: 'Noto Serif TC', serif;
+  position: relative;
+  background-color: FBFBFB;
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+}
+section {
+  padding: 100px 0;
+  @include mobile {
+    padding: 70px 0;
+  }
 }
 a {
   text-decoration: none;
+  display: block;
+  transition:.3s;
+  &:hover {
+    transition:.3s;
+  }
 }
+li {
+  list-style: none;
+}
+p {
+  font-size: 20px;
+  line-height:1.65;
+  font-weight: 400;
+  color:#444;
+  margin-bottom: 0;
+}
+p+p {
+  margin-top: 30px;
+}
+.font-serif {
+ font-family: 'Noto Serif TC', serif;
+}
+
 
 
 /*------------------------------------*\
@@ -129,16 +172,19 @@ a {
 .navbar {
   padding-top: 1rem;
   padding-bottom: 1rem;
+
   .navbar-toggler {
     cursor: pointer;
-    border:none;
+    border: none;
     background-color: $main-color;
     padding: 14px 30px;
     border-radius: 50px;
+
     a {
       color: #fff;
-      letter-spacing:2px;
+      letter-spacing: 2px;
       font-size: 18px;
+
       i {
         margin-left: 8px;
       }
@@ -147,63 +193,140 @@ a {
 }
 
 .navbar-side {
-    height: 100%;
-    max-width: 40rem;
-    font-size: 1.6rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #fff;
-    overflow-y: scroll;
-    z-index: 1000;
+  height: 100%;
+  max-width: 40rem;
+  font-size: 1.6rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  overflow-y: scroll;
+  z-index: 1000;
+  padding: 24px 30px;
 }
-  
+
 @media (min-width: 320px) {
+  .navbar-side {
+    width: 400px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 484px) {
   .navbar-side {
     width: 80%;
   }
 }
 
-    @media (min-width: 320px) and (max-width: 484px) {
-      .navbar-side {
-        width: 85%;
+.navbar-side {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reveal {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: #5f5f5f;
+  opacity: .6;
+  z-index: 990;
+}
+
+.close-navbar {
+  text-align: right;
+  font-size: 30px;
+  padding-right: 1rem;
+  margin-bottom: 20px;
+  a {
+    color: $main-color;
+    &:hover {
+      color: $main-color-dark;
+    }
+  }
+}
+.social-block {
+  justify-content: center;
+  display: flex;
+  font-size: 36px;
+  a {
+    color: $main-color;
+    padding: 0 20px ;
+    &:hover {
+      color: $main-color-dark;
+    }
+  }
+}
+
+//bs:navbar手風琴
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: #fff;
+  box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.navbar-side {
+  .accordion-item {
+    border-bottom: 1px solid #CADBE3;
+    letter-spacing:1px;
+  }
+  .accordion-header {
+    .accordion-button {
+      font-size: 24px;
+      font-weight: 500;
+      color: #000;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      font-family: 'Noto Serif TC', serif;
+    }
+  }
+  .accordion-body {
+    ul {
+      padding-left: 0;
+    }
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      a {
+        color: #777;
+        display: block;
+        &:hover {
+          color:$main-color;
+        }
       }
     }
-  .navbar-side {
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-transition: 400ms ease;
-    transition: 400ms ease;
+    li+li {
+      margin-top: 10px;
+    }
   }
-  .reveal {
-    -webkit-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transition: 400ms ease;
-    transition: 400ms ease;
-  }
-  .overlay {
-    position: fixed;
-    display: none;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-    background-color: #5f5f5f;
-    opacity: .6;
-    z-index: 990;
-  }
+}
 
 
 /*------------------------------------*\
   header
 \*------------------------------------*/
 .op-overlay {
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, .3);
   height: auto;
   position: absolute;
   left: 0;
@@ -212,7 +335,7 @@ a {
   height: 100vh;
 }
 
-.op-video { 
+.op-video {
   position: relative;
   top: 0;
   left: 0;
@@ -229,20 +352,29 @@ header {
   color: white;
   transition: .4s;
 
-.title {
-  min-height: calc(100vh - 85px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  font-weight: 900;
-  span {
-    font-size: 138px;
-    line-height: 1;
-    display: block;
-    mix-blend-mode: soft-light;
-    color: #fff;
+  .title {
+    min-height: calc(100vh - 85px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-weight: 900;
+
+    span {
+      font-size: 138px;
+      line-height: 1;
+      display: block;
+      mix-blend-mode: soft-light;
+      color: #fff;
     }
   }
+}
+
+/*------------------------------------*\
+  main
+\*------------------------------------*/
+// section1
+.gd-logo {
+  width: 100%;
 }
