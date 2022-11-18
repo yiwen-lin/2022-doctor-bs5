@@ -135,6 +135,56 @@
   background-color: #c8b0e6;
 }
 
+//20221118 new
+.navbar {
+  background-color: transparent;
+  -moz-transition: background-color .3s ease-in;
+  -o-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+  
+  &.active {
+    background-color: #fff;
+  }
+}
+
+.doctor-nav {
+  background-color: transparent;
+  -moz-transition: background-color .3s ease-in;
+  -o-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+
+  &.sticky {
+    position: sticky;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+  }
+}
+
+.tab {
+  &__panel {
+    .intro-img {
+      &:after {
+        opacity: 0;
+        -moz-transition: opacity .3s ease-in;
+        -o-transition: opacity .3s ease-in;
+        -webkit-transition: opacity .3s ease-in;
+        transition: opacity .3s ease-in;
+      }
+
+      &.visible {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 //白寫的tab end
 
 

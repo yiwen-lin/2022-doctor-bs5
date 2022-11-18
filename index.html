@@ -21,7 +21,7 @@
 
   <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
   <!-- <link rel="stylesheet" href="./assets/css/all.min.css"> -->
-  <link rel="stylesheet" href="./assets/css/style.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   <!-- Bootstrap CSS -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,7 +35,7 @@
 
 <body>
 
-  <nav class="navbar navbar-static sticky-top" role="navigation">
+  <nav class="navbar navbar-static sticky-top" role="navigation" data-js-id="site-nav">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="assets/images/img_logo.svg" alt="" width="90">
@@ -51,7 +51,7 @@
       <div class="navbar-side" id="navbarSide">
         <div>
           <div class="close-navbar">
-            <a href=""><i class="fa-solid fa-xmark"></i></a>
+            <a href="" data-js-is="close-sidenav"><i class="fa-solid fa-xmark"></i></a>
           </div>
           <!-- 手風琴 -->
           <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -281,21 +281,28 @@
         <div class="row">
 
           <div class="tab col-12">
-            <ul class="tab__switch clearfix" data-js-tabs="true">
-              <li data-id="js-tab" data-tab-target-id="tab1">內科</li>
-              <li data-id="js-tab" data-tab-target-id="tab2">外科</li>
-              <li data-id="js-tab" data-tab-target-id="tab3">婦兒科</li>
-              <li data-id="js-tab" data-tab-target-id="tab4">家醫科</li>
-              <li data-id="js-tab" data-tab-target-id="tab5">特殊科別</li>
-            </ul>
-
+            <div class="doctor-nav" data-js-id="doctor-nav">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <ul class="tab__switch clearfix" data-js-tabs="true">
+                      <li data-id="js-tab" data-tab-target-id="tab1">內科</li>
+                      <li data-id="js-tab" data-tab-target-id="tab2">外科</li>
+                      <li data-id="js-tab" data-tab-target-id="tab3">婦兒科</li>
+                      <li data-id="js-tab" data-tab-target-id="tab4">家醫科</li>
+                      <li data-id="js-tab" data-tab-target-id="tab5">特殊科別</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="tab__content">
               
               <div class="tab__panel" data-tab-id="tab1">
                 <div id="" class="anchorGroup">
                   <div class="intro">
                     <div class="col-12">
-                      <div class="intro-img">
+                      <div class="intro-img" data-js-id="intro-img">
                         <img src="assets/images/intro1-pc.jpg" alt="">
                       </div>
                     </div>

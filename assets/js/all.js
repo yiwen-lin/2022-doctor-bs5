@@ -11,4 +11,42 @@ $(document).ready(function() {
       $('.overlay').hide();
     });
 
+    //fix doctor nav bar
+    //navbar add color
+    //intro-img add opacity to show text
+    var $siteNav = $('[data-js-id="site-nav"]'),
+        siteNav_height = $siteNav.outerHeight(true);
+    var op_height= $('.op-overlay').outerHeight(true);
+    var $stickyDocNav = $('[data-js-id="doctor-nav"]'),
+        docNav_height = $stickyDocNav.outerHeight(true),
+        docNav_offsetTop = $stickyDocNav.offset().top;
+    var $introImg = $('[data-js-id="intro-img]'),
+        introImg_height = $introImg.outerHeight(true);
+    $(window).on('scroll',function(){
+      var scroll_dis = $(this).scrollTop();
+          
+      if (scroll_dis >= (op_height - siteNav_height)) {
+        $siteNav.addClass('active');
+      } else {
+        $siteNav.removeClass('active');
+      }
+      if (scroll_dis >= (docNav_offsetTop - docNav_height)) {
+        $stickyDocNav.addClass('sticky').css({
+          'top' : siteNav_height + 'px'
+        });
+      } else {
+        $stickyDocNav.removeClass('sticky');
+      }
+
+      if (scroll_dis >= (docNav_offsetTop - docNav_height - (introImg_height*1.5))) {
+        $('[data-js-id="intro-img"]').addClass('visible')
+      }
     });
+
+    //close side nav
+    $('[data-js-is="close-sidenav"]').on('click',function(e){
+      e.preventDefault();
+      $('#navbarSide').removeClass('reveal');
+      $('.overlay').hide();
+    });
+});
