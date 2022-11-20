@@ -47,19 +47,19 @@
       float: left;
       border-bottom: 4px solid #E6E6E6;
       color: #999;
-      padding: 20px 20px;
+      padding: 10px 14px;
       cursor: pointer;
       width: 20%;
       text-align: center;
       transition: .3s;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 500;
       font-family: 'Noto Serif TC', serif;
 
       &.active {
-        border-bottom: 8px solid #2DA6E0;
+        border-bottom: 6px solid #2DA6E0;
         color: #2DA6E0;
-        padding-bottom: 18px;
+        padding-bottom: 8px;
       }
 
       &:hover {
@@ -95,7 +95,6 @@
     img {
       width: 100%;
     }
-
     &:after {
       display: block;
       content: "";
@@ -108,31 +107,10 @@
       background-size: contain;
     }
   }
-
 }
 
 .anchorGroup {
   padding: 40px 0px;
-}
-
-#tab1_section1 {
-  // background-color: #4c5763;
-}
-
-#tab1_section2 {
-  background-color: #75a187;
-}
-
-#tab1_section3 {
-  background-color: #f2cb9b;
-}
-
-#tab2_section1 {
-  background-color: #e6b0b0;
-}
-
-#tab2_section2 {
-  background-color: #c8b0e6;
 }
 
 //20221118 new
@@ -178,6 +156,7 @@
 
       &.visible {
         &:after {
+          transition: 3s;
           opacity: 1;
         }
       }
@@ -202,10 +181,9 @@
 }
 
 //全站字體
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&family=Noto+Serif+TC:wght@200;300;400;500&family=Roboto:wght@100;300;500;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@500&family=Roboto:wght@100;300;500;900&display=swap');
 $main-color:#2DA6E0;
-$main-color-dark:#1A80C2 !default;
+$main-color-dark:#1A80C2;
 
 body {
   position: relative;
@@ -238,7 +216,7 @@ li {
 p {
   font-size: 20px;
   line-height: 1.65;
-  font-weight: 400;
+  font-weight: 300;
   color: #444;
   margin-bottom: 0;
 }
@@ -426,7 +404,7 @@ p+p {
   header
 \*------------------------------------*/
 .op-overlay {
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .5);
   height: auto;
   position: absolute;
   left: 0;
@@ -477,7 +455,128 @@ header {
 /*------------------------------------*\
   main
 \*------------------------------------*/
-// section1
+
+// section 前言
 .gd-logo {
   width: 100%;
+}
+
+
+// section tab
+.doctor-block {
+  display: flex;
+  align-items: center;
+}
+.doctor-txt {
+    .doctor-title {
+      border-bottom: 1px solid $main-color;
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      h3 {
+        font-family: 'Noto Serif TC', serif;
+        font-size: 62px;
+        font-weight: 500;
+      }
+      .recommend-block {
+        a {
+          font-size: 16px;
+          color: $main-color;
+          &:hover {
+            color: $main-color-dark;
+          }
+          i {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .point {
+      padding: 60px 10px;
+      font-family: 'Noto Serif TC', serif;
+      font-size: 48px;
+      line-height: 1.3;
+      font-weight: 500;
+      position: relative;
+      &::before,&::after {
+        position: absolute;
+        display: block;
+        font-size: 50px;
+        color: $main-color;
+      }
+      &::before {
+        content:" “ ";
+        top: 20px;
+        left: -25px;
+      }
+      &::after {
+        content:" ” ";
+        bottom:0px;
+        right: 0;
+      }
+    }
+}
+.doctor-img {
+  position: relative;
+  .info-btn {
+    position:absolute;
+    bottom:30px;
+    right: 30px;
+    z-index: 100;
+    a {
+      display:inline-block;
+      cursor: pointer;
+      padding: 8px 32px;
+      font-size: 16px;
+      color: $main-color-dark;
+      border: 1px solid $main-color-dark;
+      border-radius: 50px;
+      background-color: rgba(255, 255, 255, .7);
+      &:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+  .info-box {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    background-color: rgba(26,128,194,0.85);
+    width: calc(100% - 24px);
+    height: 100%;
+    z-index: 10;
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    &.info-visible {
+      opacity: 1;
+    }
+    p {
+      color:#fff;
+      font-size: 18px;
+    }
+  }
+  .info-img {
+    img {
+      width: 100%;
+    }
+  }
+}
+.doctor-p {
+  margin: 50px auto;
+  h5 {
+    font-size: 15px;
+    color: #999;
+    font-weight: 300;
+    margin-bottom: 30px;
+    span+span {
+      margin-left: 16px;
+    }
+  }
 }

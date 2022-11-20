@@ -11,6 +11,11 @@ $(document).ready(function() {
       $('.overlay').hide();
     });
 
+    $('.navbarSide-li').on('click', function(){
+      $('#navbarSide').removeClass('reveal');
+      $('.overlay').hide();
+    });
+
     //fix doctor nav bar
     //navbar add color
     //intro-img add opacity to show text
@@ -49,4 +54,10 @@ $(document).ready(function() {
       $('#navbarSide').removeClass('reveal');
       $('.overlay').hide();
     });
+
+    //
+    $('.info-btn').on('click', function(){
+      $('.info-box').addClass('info-visible');
+    });
+
 });
