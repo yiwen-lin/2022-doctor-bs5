@@ -11,6 +11,7 @@
     clear: both;
   }
 }
+
 .anchorList {
   position: fixed;
   right: 0;
@@ -92,9 +93,11 @@
   .intro-img {
     position: relative;
     margin-bottom: 60px;
+
     img {
       width: 100%;
     }
+
     &:after {
       display: block;
       content: "";
@@ -110,7 +113,7 @@
 }
 
 .anchorGroup {
-  padding: 40px 0px;
+  padding: 70px 0px;
 }
 
 //20221118 new
@@ -120,7 +123,7 @@
   -o-transition: background-color .3s ease-in;
   -webkit-transition: background-color .3s ease-in;
   transition: background-color .3s ease-in;
-  
+
   &.active {
     background-color: #fff;
   }
@@ -445,6 +448,7 @@ header {
       display: block;
       mix-blend-mode: soft-light;
       color: #fff;
+
       @include mobile {
         font-size: 90px;
       }
@@ -455,80 +459,97 @@ header {
 /*------------------------------------*\
   main
 \*------------------------------------*/
-
 // section 前言
 .gd-logo {
   width: 100%;
 }
 
 
-// section tab
+// section 各科別醫生
 .doctor-block {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
+  &.flex-center {
+    align-items: center;
+  }
 }
+
 .doctor-txt {
-    .doctor-title {
-      border-bottom: 1px solid $main-color;
-      padding-bottom: 8px;
-      display: flex;
-      justify-content: space-between;
-      h4 {
-        font-size: 18px;
-        font-weight: 600;
-      }
-      h3 {
-        font-family: 'Noto Serif TC', serif;
-        font-size: 62px;
-        font-weight: 500;
-      }
-      .recommend-block {
-        a {
-          font-size: 16px;
-          color: $main-color;
-          &:hover {
-            color: $main-color-dark;
-          }
-          i {
-            margin-left: 10px;
-          }
+  .doctor-title {
+    border-bottom: 1px solid $main-color;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 50px;
+      font-weight: 500;
+    }
+
+    .recommend-block {
+      a {
+        font-size: 16px;
+        color: $main-color;
+
+        &:hover {
+          color: $main-color-dark;
+        }
+
+        i {
+          margin-left: 10px;
         }
       }
     }
-    .point {
-      padding: 60px 10px;
-      font-family: 'Noto Serif TC', serif;
-      font-size: 48px;
-      line-height: 1.3;
-      font-weight: 500;
-      position: relative;
-      &::before,&::after {
-        position: absolute;
-        display: block;
-        font-size: 50px;
-        color: $main-color;
-      }
-      &::before {
-        content:" “ ";
-        top: 20px;
-        left: -25px;
-      }
-      &::after {
-        content:" ” ";
-        bottom:0px;
-        right: 0;
-      }
+  }
+
+  .point {
+    padding: 60px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 54px;
+    line-height: 1.3;
+    font-weight: 500;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      font-size: 50px;
+      color: $main-color;
     }
+
+    &::before {
+      content: " “ ";
+      top: 20px;
+      left: -25px;
+    }
+
+    &::after {
+      content: " ” ";
+      bottom: 0px;
+      right: 0;
+    }
+  }
 }
+
 .doctor-img {
   position: relative;
+
   .info-btn {
-    position:absolute;
-    bottom:30px;
+    position: absolute;
+    bottom: 30px;
     right: 30px;
-    z-index: 100;
+    z-index: 90;
+
     a {
-      display:inline-block;
+      display: inline-block;
       cursor: pointer;
       padding: 8px 32px;
       font-size: 16px;
@@ -536,47 +557,240 @@ header {
       border: 1px solid $main-color-dark;
       border-radius: 50px;
       background-color: rgba(255, 255, 255, .7);
+
       &:hover {
         background-color: rgba(255, 255, 255, 1);
       }
     }
   }
+
   .info-box {
     position: absolute;
     top: 0;
     left: 12px;
-    background-color: rgba(26,128,194,0.85);
+    background-color: rgba(26, 128, 194, 0.85);
     width: calc(100% - 24px);
     height: 100%;
     z-index: 10;
     padding: 40px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
+
     &.info-visible {
       opacity: 1;
     }
+
     p {
-      color:#fff;
+      color: #fff;
       font-size: 18px;
     }
   }
+
   .info-img {
     img {
       width: 100%;
     }
   }
 }
+
 .doctor-p {
   margin: 50px auto;
+
   h5 {
     font-size: 15px;
     color: #999;
     font-weight: 300;
     margin-bottom: 30px;
+
     span+span {
       margin-left: 16px;
     }
+  }
+
+  .more-btn {
+    font-size: 15px;
+    font-weight: 400;
+    color: $main-color;
+    text-align: right;
+    margin-top: 14px;
+
+    i {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: $main-color-dark;
+    }
+  }
+}
+
+// section 雜誌導購
+.magazin-img {
+  width: 100%;
+  background: url(../images/mag-pc.jpg) center no-repeat;
+  background-size: 100% auto;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 27%;
+  }
+}
+
+/*------------------------------------*\
+  footer
+\*------------------------------------*/
+.Social {
+  margin: auto;
+  padding: 40px 0;
+
+  .wrap {
+    position: relative;
+    width: 100%;
+    pointer-events: none;
+
+    .wrapper {
+      margin: auto;
+      width: 960px;
+      pointer-events: auto;
+      @media (max-width: 64em) {
+        width: 768px;
+      }
+      @media (max-width: 63.9375em) {
+        width: 576px;
+      }
+      @media (max-width: 39.9375em) {
+          width: calc(100% - 30px);
+      }
+
+
+      h2 {
+        color: #222;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: center;
+        @media (max-width: 39.9375em) {
+          font-size: 1.75rem;
+        }
+      }
+
+      .socialMedia {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .socialGroup {
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          margin: 0 20px;
+          @media (max-width: 39.9375em) {
+            margin: 0 20px 0 0;
+            &:last-child {
+              margin: 0;
+            }
+          }
+          img {
+            height: 50px;
+            margin-bottom: 10px;
+            width: 50px;
+            @media (max-width: 39.9375em) {
+              height: 50px;
+              margin-bottom: 0;
+              width: 50px;
+            }
+          }
+
+          p {
+            color: #222;
+            display: block;
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: .25px;
+            @media (max-width: 63.9375em) {
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+footer {
+  width: 100%;
+  padding: 30px 0;
+  color: #222;
+  background: #fff;
+
+  ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    @media (max-width: 39.9375em) {
+      flex-wrap: wrap;
+    }
+
+    li {
+      font-size: 15px;
+      line-height: 15px;
+      border-right: 1px solid #222;
+      padding: 0 10px 0 0;
+      margin: 0 10px 10px 0;
+      @media (max-width: 39.9375em) {
+        padding: 0 5px 0 0;
+        margin: 0 5px 10px 0;
+      }
+
+      a {
+        color: #222;
+        line-height: 15px;
+
+        &:hover {
+          color: #000;
+        }
+      }
+
+      &:last-child {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  p {
+    color: #222;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }

@@ -1,6 +1,21 @@
-// navbar side
+
 $(document).ready(function() {
 
+  $('[data-js-tabs="true"]').tabs();
+      $('[data-js-anchor="true"]').on('click', function (e) {
+        e.preventDefault();
+        //切換tab
+        var tab_id = $(this).data('tab-target');
+        $('[data-tab-target-id="' + tab_id + '"]').trigger('click');
+        //滾動至anchor目標區塊
+        var obj = $(this).attr("href");
+        $('html,body').animate({
+          scrollTop: $(obj).offset().top
+        }, 800);
+        return false;
+      });
+
+    // navbar side
     $('#navbarSideButton').on('click', function() {
       $('#navbarSide').addClass('reveal');
       $('.overlay').show();
@@ -55,7 +70,7 @@ $(document).ready(function() {
       $('.overlay').hide();
     });
 
-    //
+    //給白：小檔案的click toggle效果
     $('.info-btn').on('click', function(){
       $('.info-box').addClass('info-visible');
     });
