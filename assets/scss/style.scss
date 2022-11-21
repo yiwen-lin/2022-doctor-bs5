@@ -277,6 +277,9 @@ p+p {
   overflow-y: scroll;
   z-index: 1000;
   padding: 24px 30px;
+  @include mobile {
+    padding: 20px 20px;
+  }
 }
 
 @media (min-width: 320px) {
@@ -436,7 +439,7 @@ header {
   text-align: center;
   color: white;
   transition: .4s;
-
+  position: relative;
   .title {
     min-height: calc(100vh - 85px);
     display: flex;
@@ -444,21 +447,84 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    font-weight: 900;
-
-    span {
+    h3 {
       font-size: 138px;
       line-height: 1;
       display: block;
       mix-blend-mode: soft-light;
       color: #fff;
-
       @include mobile {
         font-size: 90px;
       }
     }
+
+    //animation
+    h2 {
+      font-size: 120px;
+      line-height: 1;
+      font-weight: 900;
+      display: block;
+      mix-blend-mode: soft-light;
+      color: #fff;
+      color: transparent;
+      -webkit-animation: blurFadeInOut 1.5s ease-in forwards;
+      -moz-animation: blurFadeInOut 1.5s ease-in forwards;
+      -ms-animation: blurFadeInOut 1.5s ease-in forwards;
+      animation: blurFadeInOut 1.5s ease-in forwards;
+      span {
+        font-size: 30px;
+        font-weight: 500;
+      }
+      @include mobile {
+        font-size: 86px;
+        margin-bottom: 20%;
+      }
+      .frame {
+        -webkit-animation-delay: 0s;
+        -moz-animation-delay: 0s;
+        -ms-animation-delay: 0s;
+        animation-delay: 0s;
+      }
+      @-webkit-keyframes blurFadeInOut {
+        0% {
+          opacity: 0;
+          text-shadow: 0px 0px 40px #fff;
+          -webkit-transform: scale(1.3);
+        }
+        100% {
+          opacity: 1;
+          text-shadow: 0px 0px 1px #fff;
+          -webkit-transform: scale(1);
+        }
+      }
+    }
+    //animation end
   }
 }
+//animation
+// .title h2 {
+//   position: absolute;
+//   top: 50%;
+//   line-height: 100px;
+//   height: 90px;
+//   margin-top: -50px;
+//   font-size: 90px;
+//   width: 100%;
+//   text-align: center;
+//   color: transparent;
+//   -webkit-animation: blurFadeInOut 2s ease-in forwards;
+//   -moz-animation: blurFadeInOut 2s ease-in forwards;
+//   -ms-animation: blurFadeInOut 2s ease-in forwards;
+//   animation: blurFadeInOut 2s ease-in forwards;
+// }
+// .title h2.frame {
+//   -webkit-animation-delay: 0s;
+//   -moz-animation-delay: 0s;
+//   -ms-animation-delay: 0s;
+//   animation-delay: 0s;
+// }
+
+
 
 /*------------------------------------*\
   main
