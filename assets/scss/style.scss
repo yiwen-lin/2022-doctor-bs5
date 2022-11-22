@@ -1,3 +1,16 @@
+// mixin
+@mixin mobile {
+  @media(max-width:767px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media(max-width:992px) {
+    @content;
+  }
+}
+
 //白寫的tab
 .clearfix {
 
@@ -43,7 +56,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
+    @include mobile {
+      display: flex;
+      align-items: stretch;
+    }
     &>li {
       float: left;
       border-bottom: 4px solid #E6E6E6;
@@ -56,16 +72,21 @@
       font-size: 22px;
       font-weight: 500;
       font-family: 'Noto Serif TC', serif;
-
       &.active {
         border-bottom: 6px solid #2DA6E0;
         color: #2DA6E0;
         padding-bottom: 8px;
       }
-
       &:hover {
         color: #2DA6E0;
         transition: .3s;
+      }
+      @include mobile {
+        font-size: 20px;
+        letter-spacing:2px;
+        writing-mode:vertical-lr;
+        display: flex;
+        align-items: center;
       }
     }
   }
@@ -73,23 +94,6 @@
   &__panel {
     display: none;
   }
-
-  // .intro {
-  //   img {
-  //     width: 100%;
-  //     position: relative;
-  //     &:after {
-  //       display: block;
-  //       content: "";
-  //       position: absolute;
-  //       top: 0;
-  //       left: 0;
-  //       // width: 900px;
-  //       // height: 100%;
-  //       background-image: url(../images/intro1-pc-txt.png);
-  //     }
-  //   }
-  // }
   .intro-img {
     position: relative;
     margin-bottom: 60px;
@@ -114,6 +118,9 @@
 
 .anchorGroup {
   padding: 70px 0px;
+  @include mobile {
+    padding: 30px 0px;
+  }
 }
 
 //20221118 new
@@ -173,19 +180,6 @@
 
 //白寫的tab end
 
-
-// mixin
-@mixin mobile {
-  @media(max-width:767px) {
-    @content;
-  }
-}
-
-@mixin ipad {
-  @media(max-width:992px) {
-    @content;
-  }
-}
 
 //全站字體
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@500&family=Roboto:wght@100;300;500;900&display=swap');
@@ -255,7 +249,6 @@ p+p {
     background-color: $main-color;
     padding: 14px 30px;
     border-radius: 50px;
-
     a {
       color: #fff;
       letter-spacing: 2px;
@@ -263,6 +256,13 @@ p+p {
 
       i {
         margin-left: 8px;
+      }
+    }
+    @include mobile {
+      padding: 12px 18px 12px 22px;
+      a {
+        letter-spacing: 1px;
+        font-size: 16px;
       }
     }
   }
@@ -505,30 +505,6 @@ header {
     //animation end
   }
 }
-//animation
-// .title h2 {
-//   position: absolute;
-//   top: 50%;
-//   line-height: 100px;
-//   height: 90px;
-//   margin-top: -50px;
-//   font-size: 90px;
-//   width: 100%;
-//   text-align: center;
-//   color: transparent;
-//   -webkit-animation: blurFadeInOut 2s ease-in forwards;
-//   -moz-animation: blurFadeInOut 2s ease-in forwards;
-//   -ms-animation: blurFadeInOut 2s ease-in forwards;
-//   animation: blurFadeInOut 2s ease-in forwards;
-// }
-// .title h2.frame {
-//   -webkit-animation-delay: 0s;
-//   -moz-animation-delay: 0s;
-//   -ms-animation-delay: 0s;
-//   animation-delay: 0s;
-// }
-
-
 
 /*------------------------------------*\
   main
@@ -537,7 +513,6 @@ header {
 .gd-logo {
   width: 100%;
 }
-
 
 // section 各科別醫生
 .doctor-block {
@@ -556,6 +531,7 @@ header {
 }
 .doctor-txt {
   overflow-x: hidden;
+  padding: 0 50px;
   @include mobile {
     padding: 0 30px;
   }
@@ -572,7 +548,7 @@ header {
 
     h3 {
       font-family: 'Noto Serif TC', serif;
-      font-size: 50px;
+      font-size: 46px;
       font-weight: 500;
       @include mobile {
         font-size: 40px;
@@ -632,14 +608,17 @@ header {
 
 .doctor-img {
   position: relative;
+  padding: 0 80px;
   @include mobile {
     width: 100%;
+    padding: 0 15px;
+    margin-bottom: 26px;
   }
 
   .info-btn {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 22px;
+    right: 90px;
     z-index: 90;
     a {
       display: inline-block;
@@ -655,17 +634,17 @@ header {
       }
     }
     @include mobile {
-      bottom: 36px;
-      right: 26px;
+      bottom: 18px;
+      right: 28px;
     }
   }
 
   .info-box {
     position: absolute;
     top: 0;
-    left: 12px;
+    left: 80px;
     background-color: rgba(26, 128, 194, 0.85);
-    width: calc(100% - 24px);
+    width: calc(100% - 160px);
     height: 100%;
     z-index: 10;
     padding: 40px;
@@ -681,8 +660,8 @@ header {
       font-size: 18px;
     }
     @include mobile {
-      // left: 0;
-      // width: 100%;
+      left: 15px;
+      width: calc(100% - 30px);
     }
   }
 
@@ -692,7 +671,7 @@ header {
       width: 100%;
     }
     @include mobile {
-      margin-bottom: 26px;
+      // margin-bottom: 26px;
       img {
         height: 420px;
         object-fit: cover;

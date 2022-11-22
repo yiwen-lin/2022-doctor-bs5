@@ -73,7 +73,7 @@ $(document).ready(function() {
       $('.overlay').hide();
     });
 
-    //給白：小檔案的click toggle效果
+    //小檔案的click
     $('[data-js-id="info-btn"]').on('click', function(e){
       e.stopPropagation();
       var $info_box = $(this).next('[data-js-id="info-box"]'),
