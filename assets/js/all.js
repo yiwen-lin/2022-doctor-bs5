@@ -59,7 +59,7 @@ $(document).ready(function() {
         $stickyDocNav.removeClass('sticky');
       }
 
-      if (scroll_dis >= (docNav_offsetTop - 300)) {
+      if (scroll_dis >= (docNav_offsetTop - siteNav_height - (docNav_height * 2))) {
         $('.tab__panel.current').find('[data-js-id="intro-img"]').addClass('visible');
       } else {
         $('.tab__panel.current').find('[data-js-id="intro-img"]').removeClass('visible');
