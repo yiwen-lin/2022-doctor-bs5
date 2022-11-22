@@ -156,11 +156,15 @@
         -webkit-transition: opacity .3s ease-in;
         transition: opacity .3s ease-in;
       }
+    }
 
-      &.visible {
-        &:after {
-          transition: 3s;
-          opacity: 1;
+    &.current {
+      .intro-img {
+        &.visible {
+          &:after {
+            transition: 3s;
+            opacity: 1;
+          }
         }
       }
     }
@@ -195,7 +199,7 @@ body {
   position: relative;
   background-color: FBFBFB;
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 section {
@@ -551,6 +555,7 @@ header {
   }
 }
 .doctor-txt {
+  overflow-x: hidden;
   @include mobile {
     padding: 0 30px;
   }
