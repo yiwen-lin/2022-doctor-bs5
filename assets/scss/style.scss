@@ -82,11 +82,12 @@
         transition: .3s;
       }
       @include mobile {
-        font-size: 20px;
-        letter-spacing:2px;
+        font-size: 18px;
+        letter-spacing:1px;
         writing-mode:vertical-lr;
         display: flex;
         align-items: center;
+        padding-top: 0;
       }
     }
   }
@@ -515,21 +516,11 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    h3 {
-      font-size: 138px;
-      line-height: 1;
-      display: block;
-      mix-blend-mode: soft-light;
-      color: #fff;
-      @include mobile {
-        font-size: 90px;
-      }
-    }
 
     //animation
     h2 {
-      font-size: 120px;
-      line-height: 1;
+      font-size: 160px;
+      line-height: 0.9;
       font-weight: 900;
       display: block;
       mix-blend-mode: soft-light;
@@ -540,11 +531,14 @@ header {
       -ms-animation: blurFadeInOut 1.5s ease-in forwards;
       animation: blurFadeInOut 1.5s ease-in forwards;
       span {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 500;
+        display: block;
+        margin-top: 20px;
       }
       @include mobile {
         font-size: 86px;
+        line-height: 1;
         margin-bottom: 20%;
       }
       .frame {
@@ -579,6 +573,11 @@ header {
 }
 
 // section 各科別醫生
+.tab__content {
+  overflow-x: hidden;
+  padding-left: 1px;
+  padding-right: 1px;
+}
 .doctor-block {
   display: flex;
   align-items: flex-start;
@@ -594,7 +593,7 @@ header {
   }
 }
 .doctor-txt {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   padding: 0 50px;
   @include mobile {
     padding: 0 30px;
