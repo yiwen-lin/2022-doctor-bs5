@@ -483,7 +483,7 @@ p+p {
   header
 \*------------------------------------*/
 .op-overlay {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .35);
   height: auto;
   position: absolute;
   left: 0;
@@ -524,8 +524,9 @@ header {
       font-weight: 900;
       display: block;
       mix-blend-mode: soft-light;
-      color: #fff;
-      color: transparent;
+      
+      //color: transparent;
+      // color: rgba(255, 255, 255, .7);
       -webkit-animation: blurFadeInOut 1.5s ease-in forwards;
       -moz-animation: blurFadeInOut 1.5s ease-in forwards;
       -ms-animation: blurFadeInOut 1.5s ease-in forwards;
