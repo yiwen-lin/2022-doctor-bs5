@@ -86,4 +86,43 @@ $(document).ready(function() {
         $info_box.addClass('info-visible');
       }
     });
+
+     //lightGallery
+     var $dynamicGallery = $('[data-js-id="open-popup"]');
+     $dynamicGallery.on('click', function(e){
+       e.preventDefault();
+       //get doctor number
+       let $target = $(this).data('recommend-num'); 
+       if (doctors[$target] !== undefined) {
+         let $images = doctors[$target];
+         let $baseUrl = 'assets/images/recommend/';
+         let $setImage = '';
+ 
+         for(let $i in $images) {
+           let $imageUrl = $baseUrl + $images[$i] + '.jpg';
+           $setImage += `<img src="${$imageUrl}">`
+         }
+ 
+         if ($setImage !== undefined) {
+           $('#galleryBlock').html($setImage);
+ 
+           const lg = document.getElementById('galleryBlock');
+ 
+           lightGallery(lg,{
+             download: false,
+             actualSize: false,
+             plugins: [lgZoom],
+             zoom: true,
+             showZoomInOutIcons: true,
+           });
+ 
+           $('#galleryBlock').find('img').trigger('click');
+         }
+       }
+     });
+
+     //click tab and scroll to tab__content top
+     $('[data-id="js-tab"]').on('click', function(){
+        $(window).scrollTop($('.tab__content').offset().top - (docNav_height*2));
+     });
 });
