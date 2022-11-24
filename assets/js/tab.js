@@ -37,8 +37,8 @@
 				$('[data-tab-id="' + active + '"]').fadeIn(300).addClass('current').siblings().hide().removeClass('current');
 				$('[data-tab-id="' + active + '"]').find('[data-js-id="intro-img"]').removeClass('visible');
 				$('[data-tab-id="' + active + '"].current').find('[data-js-id="intro-img"]').addClass('visible');
+				AOS.init();
 			});
-			
 		};
 
 		start();
