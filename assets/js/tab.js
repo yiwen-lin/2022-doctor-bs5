@@ -38,6 +38,7 @@
 				$('[data-tab-id="' + active + '"]').find('[data-js-id="intro-img"]').removeClass('visible');
 				$('[data-tab-id="' + active + '"].current').find('[data-js-id="intro-img"]').addClass('visible');
 			});
+			
 		};
 
 		start();
