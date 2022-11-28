@@ -256,7 +256,7 @@ html {
 }
 body {
   position: relative;
-  background-color: FBFBFB;
+  background-color: #FBFBFB;
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   // overflow-x: hidden;
 }
@@ -483,7 +483,7 @@ p+p {
   header
 \*------------------------------------*/
 .op-overlay {
-  background-color: rgba(0, 0, 0, .35);
+  background-color: rgba(0, 0, 0, .2);
   height: auto;
   position: absolute;
   left: 0;
@@ -519,11 +519,13 @@ header {
 
     //animation
     h2 {
-      font-size: 160px;
-      line-height: 0.9;
-      font-weight: 900;
-      display: block;
-      mix-blend-mode: soft-light;
+      margin-top: 20%;
+      // font-size: 160px;
+      // font-size: 120px;
+      // line-height: 0.9;
+      // font-weight: 900;
+      // display: block;
+      // mix-blend-mode: soft-light;
       
       //color: transparent;
       // color: rgba(255, 255, 255, .7);
@@ -532,15 +534,21 @@ header {
       -ms-animation: blurFadeInOut 1.5s ease-in forwards;
       animation: blurFadeInOut 1.5s ease-in forwards;
       span {
-        font-size: 40px;
-        font-weight: 500;
-        display: block;
-        margin-top: 20px;
+        // font-size: 40px;
+        // font-weight: 500;
+        // display: block;
+        // margin-top: 20px;
       }
       @include mobile {
-        font-size: 86px;
-        line-height: 1;
-        margin-bottom: 20%;
+        // font-size: 86px;
+        // line-height: 1;
+        // margin-bottom: 20%;
+        margin-top: 60%;
+      }
+      .op-img  {
+        img {
+          width: 100%;
+        }
       }
       .frame {
         -webkit-animation-delay: 0s;
@@ -785,6 +793,14 @@ header {
     content: "";
     display: block;
     padding-top: 27%;
+  }
+}
+
+.team {
+  text-align: center;
+  margin-top: 90px;
+  p {
+    font-size: 16px;
   }
 }
 
