@@ -256,7 +256,7 @@ html {
 }
 body {
   position: relative;
-  background-color: #FBFBFB;
+  // background-color: #FBFBFB;
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   // overflow-x: hidden;
 }
@@ -483,7 +483,7 @@ p+p {
   header
 \*------------------------------------*/
 .op-overlay {
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, .28);
   height: auto;
   position: absolute;
   left: 0;
@@ -543,7 +543,8 @@ header {
         // font-size: 86px;
         // line-height: 1;
         // margin-bottom: 20%;
-        margin-top: 60%;
+        margin-top: 55%;
+        padding: 0 20px;
       }
       .op-img  {
         img {
@@ -577,9 +578,20 @@ header {
   main
 \*------------------------------------*/
 // section 前言
-.gd-logo {
-  width: 100%;
+.section1 {
+  h3 {
+    margin-bottom: 30px;
+    color: $main-color;
+    text-align: center;
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+  .gd-logo {
+    width: 100%;
+  }
 }
+
 
 // section 各科別醫生
 .tab__content {
@@ -784,15 +796,26 @@ header {
 }
 
 // section 雜誌導購
+.mag-section {
+  padding-top: 0;
+}
 .magazin-img {
   width: 100%;
-  background: url(../images/mag-pc.jpg) center no-repeat;
+  background: url(../images/mag-pc.jpeg) center no-repeat;
   background-size: 100% auto;
-
   &::before {
     content: "";
     display: block;
     padding-top: 27%;
+  }
+  @include mobile {
+    background: url(../images/mag-mb.jpeg) center no-repeat;
+    background-size: 100% auto;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 80%;
+    }
   }
 }
 
