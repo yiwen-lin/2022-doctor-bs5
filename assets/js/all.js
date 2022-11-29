@@ -114,6 +114,9 @@ $(document).ready(function() {
              plugins: [lgZoom],
              zoom: true,
              showZoomInOutIcons: true,
+             mobileSettings: {
+              showCloseIcon: true,
+            }
            });
  
            $('#galleryBlock').find('img').trigger('click');
