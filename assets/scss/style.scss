@@ -312,8 +312,12 @@ p+p {
     cursor: pointer;
     border: none;
     background-color: $main-color;
-    padding: 14px 30px;
+    padding: 14px 28px 14px 30px;
     border-radius: 50px;
+    transition:.3s;
+    &:hover {
+      background-color: $main-color-dark;
+    }
     a {
       color: #fff;
       letter-spacing: 2px;
