@@ -128,4 +128,8 @@ $(document).ready(function() {
      $('[data-id="js-tab"]').on('click', function(){
         $(window).scrollTop($('.tab__content').offset().top - (docNav_height*2));
      });
+
+     $('.kv').css({
+      'visibility' : 'visible'
+      })
 });
